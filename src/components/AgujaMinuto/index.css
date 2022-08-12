@@ -2,7 +2,7 @@
     width: var(--diametro);
     position: absolute;
     z-index: 2; 
-}
+    filter: drop-shadow(0 0 0.5rem #000000aa);}
   
 @media (prefers-reduced-motion: no-preference) {
     .aguja-minuto {
