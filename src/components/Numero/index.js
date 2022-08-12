@@ -12,8 +12,8 @@ const Numero = ({num}) => {
 
     return (
         <>
-            <div class="pos-numero" style={{transform: giro}}>
-                <p class="numero" style={{transform: antiGiro}}>{num}</p>
+            <div className="pos-numero" style={{transform: giro}}>
+                <p className="numero" style={{transform: antiGiro}}>{num}</p>
             </div>
         </>
     );

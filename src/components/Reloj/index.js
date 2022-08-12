@@ -16,7 +16,7 @@ const Reloj = ({hora}) => {
     }
 
     return (
-        <div class="reloj">
+        <div className="reloj">
             {numeros}
             <AgujaHora hora = {hh}/>
             <AgujaMinuto minuto = {mm}/>
