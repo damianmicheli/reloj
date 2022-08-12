@@ -17,11 +17,13 @@ const Reloj = ({hora}) => {
     }
 
     return (
-        <div className="reloj">
-            {numeros}
-            <AgujaHora hora = {hh} minuto = {mm}/>
-            <AgujaMinuto minuto = {mm} segundo = {ss}/>
-        </div>  
+        <div className = "reloj-container">
+            <div className="reloj">
+                {numeros}
+                <AgujaHora hora = {hh} minuto = {mm}/>
+                <AgujaMinuto minuto = {mm} segundo = {ss}/>
+            </div>  
+        </div>
     );
 }
 
