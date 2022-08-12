@@ -3,3 +3,9 @@
     position: absolute;
     z-index: 2; 
 }
+  
+@media (prefers-reduced-motion: no-preference) {
+    .aguja-minuto {
+      animation: aguja-minuto-spin infinite 3600s linear;
+    }
+}

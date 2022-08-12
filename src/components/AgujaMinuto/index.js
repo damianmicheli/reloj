@@ -1,15 +1,25 @@
 import Manecilla from '../../assets/minuto.png'
 import './index.css'
 
-const AgujaMinuto = ({minuto}) => {
-    let giro = `rotate(0deg)`;
+const AgujaMinuto = ({minuto, segundo}) => {
 
-    if (minuto !== 0) {
-        giro = `rotate(${minuto * 6}deg)`;
-    }
-    
+    const posInicial = minuto * 6 + segundo * 0.1;
+
+    const css = `
+    @keyframes aguja-minuto-spin {
+        from {
+          transform: rotate(${ posInicial }deg);
+        }
+        to {
+          transform: rotate(${ posInicial + 360 }deg);
+        }
+    }    ` 
+
     return (
-        <img src={Manecilla} className="aguja-minuto" style={{transform: giro}} alt="Aguja Minuto"/>
+        <>
+            <style> {css} </style>
+            <img src={Manecilla} className="aguja-minuto" alt="Aguja Minuto"/>
+        </>
     );
 };
 

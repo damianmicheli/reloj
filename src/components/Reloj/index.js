@@ -8,6 +8,7 @@ const Reloj = ({hora}) => {
     const arrayHora = hora.split(":");
     const hh = arrayHora[0];
     const mm = arrayHora[1];
+    const ss = arrayHora[2]
 
     let numeros = [];
 
@@ -18,8 +19,8 @@ const Reloj = ({hora}) => {
     return (
         <div className="reloj">
             {numeros}
-            <AgujaHora hora = {hh}/>
-            <AgujaMinuto minuto = {mm}/>
+            <AgujaHora hora = {hh} minuto = {mm}/>
+            <AgujaMinuto minuto = {mm} segundo = {ss}/>
         </div>  
     );
 }
