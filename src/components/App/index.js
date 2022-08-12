@@ -5,7 +5,8 @@ function App() {
 
   return (
 
-    <Reloj hora = {horaActual} />
+    <Reloj hora = "1:15" />
+    // <Reloj hora = {horaActual} />
 
   );
 }
