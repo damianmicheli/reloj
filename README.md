@@ -6,9 +6,11 @@ Proyecto realizado con `Create React App`.
 
 ## Instalación
 
-En el directorio del proyecto ejecutar:
+Desde cualquier directorio ejecutar:
 
 ```console
+git clone https://github.com/damianmicheli/reloj.git
+cd reloj
 npm install
 npm start
 ```
