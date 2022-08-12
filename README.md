@@ -33,4 +33,4 @@ Ejemplo:
 <Reloj hora = "5:26" />
 ```
 ### Demo
-Probalo en: [https://reloj.dami.com.ar/](https://reloj.dami.com.ar/).
+Probalo en: [https://reloj.dami.com.ar](https://reloj.dami.com.ar).
