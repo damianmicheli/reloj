@@ -1,0 +1,5 @@
+.aguja-hora {
+    width: var(--diametro);
+    position: absolute;
+    z-index: 3;
+}
