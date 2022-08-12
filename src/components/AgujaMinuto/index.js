@@ -3,7 +3,7 @@ import './index.css'
 
 const AgujaMinuto = ({minuto, segundo}) => {
 
-    const posInicial = minuto * 6 + segundo * 0.1;
+    const posInicial = minuto * 6 + segundo * 0.1 ;
 
     const css = `
     @keyframes aguja-minuto-spin {
@@ -13,7 +13,7 @@ const AgujaMinuto = ({minuto, segundo}) => {
         to {
           transform: rotate(${ posInicial + 360 }deg);
         }
-    }    ` 
+    }` 
 
     return (
         <>

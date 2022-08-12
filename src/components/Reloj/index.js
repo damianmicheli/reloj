@@ -8,7 +8,7 @@ const Reloj = ({hora}) => {
     const arrayHora = hora.split(":");
     const hh = arrayHora[0];
     const mm = arrayHora[1];
-    const ss = arrayHora[2]
+    const ss = arrayHora[2].substring(0,2);
 
     let numeros = [];
 
