@@ -1,4 +1,4 @@
-import './index.css'
+import styles from './reloj.module.css'
 import Numero from '../Numero'
 import AgujaHora from '../AgujaHora'
 import AgujaMinuto from '../AgujaMinuto'
@@ -17,8 +17,8 @@ const Reloj = ({hora}) => {
     }
 
     return (
-        <div className = "reloj-container">
-            <div className="reloj">
+        <div className = {styles.relojContainer}>
+            <div className={styles.reloj}>
                 {numeros}
                 <AgujaHora hora = {hh} minuto = {mm}/>
                 <AgujaMinuto minuto = {mm} segundo = {ss}/>

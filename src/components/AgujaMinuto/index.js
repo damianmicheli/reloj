@@ -1,12 +1,12 @@
 import Manecilla from '../../assets/minuto.png'
-import './index.css'
+import styles from './aguja-minuto.module.css'
 
 const AgujaMinuto = ({minuto, segundo}) => {
 
     const posInicial = minuto * 6 + segundo * 0.1 ;
 
     const css = `
-    @keyframes aguja-minuto-spin {
+    @keyframes ${styles.spin} {
         from {
           transform: rotate(${ posInicial }deg);
         }
@@ -18,7 +18,7 @@ const AgujaMinuto = ({minuto, segundo}) => {
     return (
         <>
             <style> {css} </style>
-            <img src={Manecilla} className="aguja-minuto" alt="Aguja Minuto"/>
+            <img src={Manecilla} className={styles.agujaMinuto} alt="Aguja Minuto"/>
         </>
     );
 };

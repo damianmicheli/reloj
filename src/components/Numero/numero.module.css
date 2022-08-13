@@ -1,4 +1,4 @@
-.pos-numero{
+.posNumero{
     position:absolute;
     top: var(--arriba);
     left: var(--izquierda);

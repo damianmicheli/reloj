@@ -20,7 +20,7 @@
     z-index: 0;
 }
 
-.reloj-container {
+.relojContainer {
     background-image: url("../../assets/pulsera.webp");
     background-size: contain;
     width: var(--ancho-malla);

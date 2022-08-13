@@ -1,4 +1,4 @@
-import './index.css'
+import styles from './numero.module.css'
 
 const Numero = ({num}) => {
     
@@ -12,8 +12,8 @@ const Numero = ({num}) => {
 
     return (
         <>
-            <div className="pos-numero" style={{transform: giro}}>
-                <p className="numero" style={{transform: antiGiro}}>{num}</p>
+            <div className={styles.posNumero} style={{transform: giro}}>
+                <p className={styles.numero} style={{transform: antiGiro}}>{num}</p>
             </div>
         </>
     );

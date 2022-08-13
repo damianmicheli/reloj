@@ -1,4 +1,4 @@
-.aguja-hora {
+.agujaHora {
     width: var(--diametro);
     position: absolute;
     z-index: 3;
@@ -6,7 +6,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .aguja-hora {
-      animation: aguja-hora-spin infinite 216000s linear;
+    .agujaHora {
+      animation: spin infinite 216000s linear;
     }
 }
