@@ -1,18 +1,25 @@
-.posNumero{
-    position:absolute;
-    top: var(--arriba);
-    left: var(--izquierda);
-    transform-origin: var(--arriba) var(--izquierda);
-    z-index: 1;
+.posNumero {
+  position: absolute;
+  top: var(--arriba);
+  left: var(--izquierda);
+  transform-origin: var(--arriba) var(--izquierda);
+  z-index: 1;
 }
 
 .numero {
-    font-size: calc(var(--diametro)/10);
-    font-weight: 500;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background: linear-gradient(to bottom, #cfc09f 22%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 0.3rem #000000aa);
+  font-size: calc(var(--diametro) / 10);
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #cfc09f 22%,
+    #cfc09f 26%,
+    #cfc09f 27%,
+    #ffecb3 40%,
+    #3a2c0f 78%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 0.3rem #000000aa);
 }
