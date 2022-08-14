@@ -1,0 +1,12 @@
+.agujaSegundo {
+    width: var(--diametro);
+    position: absolute;
+    z-index: 3;
+    filter: drop-shadow(0 0 0.5rem #000000aa);
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .agujaHora {
+      animation: spin infinite 216000s linear;
+    }
+} */

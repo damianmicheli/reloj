@@ -1,29 +1,48 @@
-import styles from './reloj.module.css'
-import Numero from '../Numero'
-import AgujaHora from '../AgujaHora'
-import AgujaMinuto from '../AgujaMinuto'
+import React, { Component } from "react";
 
-const Reloj = ({hora}) => {
+import styles from "./reloj.module.css";
+import Numero from "../Numero";
+import AgujaHora from "../AgujaHora";
+import AgujaMinuto from "../AgujaMinuto";
+import AgujaSegundo from "../AgujaSegundo";
 
-    const arrayHora = hora.split(":");
+export default class Reloj extends Component {
+  
+  constructor() {
+    super();
+    this.state = {
+      hora: new Date().toLocaleTimeString("en-US"),
+    };
+  }
+
+  actualizar = () => {
+    setTimeout(() => {
+      this.setState({ hora: new Date().toLocaleTimeString("en-US") });
+      this.actualizar();
+    }, 1000);
+  };
+
+  render() {
+    const arrayHora = this.state.hora.split(":");
     const hh = arrayHora[0];
     const mm = arrayHora[1];
+    const ss = arrayHora[2] ? arrayHora[2].substring(0,2) : "00";
 
     let numeros = [];
 
     for (let i = 1; i <= 12; i++) {
-        numeros.push(<Numero key={i} num={i} />);
+      numeros.push(<Numero key={i} num={i} />);
     }
 
     return (
-        <div className = {styles.relojContainer}>
-            <div className={styles.reloj}>
-                {numeros}
-                <AgujaHora hora = {hh} />
-                <AgujaMinuto minuto = {mm} />
-            </div>  
+      <div onLoad={this.actualizar} className={styles.relojContainer}>
+        <div className={styles.reloj}>
+          {numeros}
+          <AgujaHora hora={hh} />
+          <AgujaMinuto minuto={mm} />
+          <AgujaSegundo segundo={ss} />
         </div>
+      </div>
     );
+  }
 }
-
-export default Reloj;
