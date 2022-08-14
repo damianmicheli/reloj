@@ -1,27 +1,18 @@
-import Manecilla from '../../assets/hora.png'
-import './index.css'
+import Manecilla from "../../assets/hora.png";
+import styles from "./aguja-hora.module.css";
 
+const AgujaHora = ({ hora }) => {
+  const posInicial = hora * 30;
+  const giro = `rotate(${posInicial}deg)`;
 
-const AgujaHora = ({hora, minuto}) => {
-
-    const posInicial = hora * 30 + minuto * 0.5;
-
-    const css = `
-    @keyframes aguja-hora-spin {
-        from {
-          transform: rotate(${ posInicial }deg);
-        }
-        to {
-          transform: rotate(${ posInicial + 360 }deg);
-        }
-    }` 
-    
-    return (
-        <>
-            <style> {css} </style>
-            <img src={Manecilla} className="aguja-hora" alt="Aguja Hora"/>
-        </>
-    );
+  return (
+    <img
+      src={Manecilla}
+      className={styles.agujaHora}
+      style={{ transform: giro }}
+      alt="Aguja Hora"
+    />
+  );
 };
 
 export default AgujaHora;

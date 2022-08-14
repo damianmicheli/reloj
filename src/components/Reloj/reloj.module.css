@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --diametro: 400px;
+  --ancho-malla: calc(var(--diametro) * 1.215);
+  --arriba: calc(var(--diametro) * 0.06);
+  --izquierda: calc(var(--diametro) * 0.44);
+}
+
+.reloj {
+  width: var(--diametro);
+  height: var(--diametro);
+  border-radius: 50%;
+  background: linear-gradient(
+    153deg,
+    rgb(0, 0, 0) 0%,
+    rgb(121, 121, 121) 48%,
+    rgb(0, 0, 0) 100%
+  );
+  position: relative;
+  top: calc(var(--diametro) * 0.284);
+  left: calc(var(--diametro) * 0.087);
+  z-index: 0;
+}
+
+.relojContainer {
+  background-image: url("../../assets/pulsera.webp");
+  background-size: contain;
+  width: var(--ancho-malla);
+  height: calc(var(--ancho-malla) * 1.6);
+  position: absolute;
+  top: 10vh;
+  left: 30vw;
+}

@@ -1,13 +1,7 @@
-import Reloj from '../Reloj'
+import Reloj from "../Reloj";
 
 function App() {
-  const horaActual = new Date().toLocaleTimeString('en-US');
-
-  return (
-
-    <Reloj hora = {horaActual} />
-
-  );
+  return <Reloj />;
 }
 
 export default App;
