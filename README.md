@@ -17,7 +17,7 @@ npm start
 
 ## Cambiar tamaño
 Es posible cambiar el tamaño del reloj definiendo sólo el diámetro.
-El diámetro se encuentra en la clase `:root` del archivo `components/Reloj/index.css`.
+El diámetro se encuentra en la clase `:root` del archivo `components/Reloj/reloj.module.css`.
 
 Valor por defecto:
 

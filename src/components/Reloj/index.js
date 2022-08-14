@@ -17,14 +17,14 @@ export default class Reloj extends Component {
     setTimeout(() => {
       this.setState({ hora: new Date().toLocaleTimeString("en-US") });
       this.actualizar();
-    }, 1000);
+    }, 500);
   };
 
   render() {
     const arrayHora = this.state.hora.split(":");
     const hh = arrayHora[0];
     const mm = arrayHora[1];
-    const ss = arrayHora[2] ? arrayHora[2].substring(0, 2) : "00";
+    const ss = arrayHora[2].substring(0, 2);
 
     let numeros = [];
 
