@@ -1,9 +1,7 @@
-import Reloj from '../Reloj'
+import Reloj from "../Reloj";
 
 function App() {
-  return (
-    <Reloj />
-  );
+  return <Reloj />;
 }
 
 export default App;

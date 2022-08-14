@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import styles from "./reloj.module.css";
 import Numero from "../Numero";
 import AgujaHora from "../AgujaHora";
@@ -7,7 +6,6 @@ import AgujaMinuto from "../AgujaMinuto";
 import AgujaSegundo from "../AgujaSegundo";
 
 export default class Reloj extends Component {
-  
   constructor() {
     super();
     this.state = {
@@ -26,7 +24,7 @@ export default class Reloj extends Component {
     const arrayHora = this.state.hora.split(":");
     const hh = arrayHora[0];
     const mm = arrayHora[1];
-    const ss = arrayHora[2] ? arrayHora[2].substring(0,2) : "00";
+    const ss = arrayHora[2] ? arrayHora[2].substring(0, 2) : "00";
 
     let numeros = [];
 
