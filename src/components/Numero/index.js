@@ -1,14 +1,9 @@
 import styles from './numero.module.css'
 
 const Numero = ({num}) => {
-    
-    let giro = "rotate(5deg)";
-    let antiGiro = "rotate(-5deg)";
-    
-    if (num !== 12) {
-        giro = `rotate(${num * 30 + 5}deg)`;
-        antiGiro = `rotate(-${num * 30 + 5}deg)`
-    }
+
+    const giro = `rotate(${num * 30 + 5}deg)`;
+    const antiGiro = `rotate(-${num * 30 + 5}deg)`
 
     return (
         <>
