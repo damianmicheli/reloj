@@ -6,39 +6,28 @@ import AgujaMinuto from "../AgujaMinuto";
 import AgujaSegundo from "../AgujaSegundo";
 
 export default class Reloj extends Component {
-
   constructor() {
-
     super();
-    
+
     this.state = {
-      hora: "00:00:00"
+      hora: "00:00:00",
     };
 
     this.actualizar = this.actualizar.bind(this);
-
   }
- 
-  componentDidMount(){
 
+  componentDidMount() {
     this.actualizar();
-
   }
 
   actualizar() {
-
     const horaActual = new Date().toLocaleTimeString("en-GB");
+    this.setState({ hora: horaActual });
 
-
-    setTimeout(() => {
-      this.setState({ hora: horaActual });
-      this.actualizar();
-    }, 1000);
-
-  };
+    setTimeout(() => this.actualizar(), 1000);
+  }
 
   render() {
-
     const [hh, mm, ss] = this.state.hora.split(":");
 
     let numeros = [];
@@ -49,18 +38,21 @@ export default class Reloj extends Component {
 
     return (
       <>
-      <div className={styles.tip}><p>(Hacé click en cualquier lado para escuchar el sonido. Recargá la página para silenciar)</p></div>
-      <div className={styles.relojContainer} >
-        <div className={styles.reloj}>
-          {numeros}
-          <AgujaHora hora={hh} />
-          <AgujaMinuto minuto={mm} />
-          <AgujaSegundo segundo={ss} sound={this.playSound}/>
+        <div className={styles.tip}>
+          <p>
+            (Hacé click en cualquier lado para escuchar el sonido. Recargá la
+            página para silenciar)
+          </p>
         </div>
-      </div>
-              
+        <div className={styles.relojContainer}>
+          <div className={styles.reloj}>
+            {numeros}
+            <AgujaHora hora={hh} />
+            <AgujaMinuto minuto={mm} />
+            <AgujaSegundo segundo={ss} sound={this.playSound} />
+          </div>
+        </div>
       </>
-
     );
   }
 }
